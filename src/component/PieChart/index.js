@@ -11,7 +11,7 @@ class PieChart extends Component {
 
 	componentDidMount() {
 		// Fetch the data from the server
-		axios.get('/http://localhost:3000/bigqueryData')
+		axios.get('http://localhost:5050/bigqueryData')
 			.then((response) => {
 				// Process the response data to create dataPoints for the chart
 				const dataPoints = response.data.map((item) => ({
@@ -21,6 +21,7 @@ class PieChart extends Component {
 
 				// Update the state with the dataPoints
 				this.setState({ dataPoints });
+                
 			})
 			.catch((error) => {
 				console.error('Error fetching data:', error);
