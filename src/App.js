@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Table from 'react-bootstrap/Table';
-import PieChart from './component/PieChart';
+// import PieChart from './component/PieChart';
 
 
 
@@ -20,8 +20,8 @@ function App() {
   console.log(data);
   return (
   <div>
-    <PieChart data={data}/>
-    <Table striped bordered hover>
+    {/* <PieChart data={data}/> */}
+    <Table variant="dark" striped bordered hover>
       <thead>
         <tr>
           <th>ID</th>
