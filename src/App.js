@@ -1,6 +1,9 @@
 
 import React, { useState, useEffect } from 'react';
 import Table from 'react-bootstrap/Table';
+import PieChart from './component/PieChart';
+
+
 
 function App() {
   const [data, setData] = useState([]);
@@ -12,8 +15,12 @@ function App() {
       .then((data) => setData(data))
       .catch((error) => console.error('Error fetching data:', error));
   }, []);
+
+
   console.log(data);
   return (
+  <div>
+    <PieChart data={data}/>
     <Table striped bordered hover>
       <thead>
         <tr>
@@ -44,6 +51,7 @@ function App() {
         ))}
       </tbody>
     </Table>
+    </div>
   );
 }
 
